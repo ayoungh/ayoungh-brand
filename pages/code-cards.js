@@ -14,9 +14,10 @@ const CodeCards = () => {
       <Container>
         <Sidebar />
 
-        <Link href="/blog/1">Blog 1</Link>
-        <Link href="/blog/2">Blog 1</Link>
-        <Link href="/blog/3">Blog 1</Link>
+        <main>
+          code codes will go here
+
+        </main>
       </Container>
     </>
   );

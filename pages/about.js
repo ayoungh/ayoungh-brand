@@ -14,9 +14,11 @@ const About = () => {
       <Container>
         <Sidebar />
 
-        <Link href="/blog/1">Blog 1</Link>
-        <Link href="/blog/2">Blog 1</Link>
-        <Link href="/blog/3">Blog 1</Link>
+        <main>
+          About me here
+        </main>
+
+
       </Container>
     </>
   );
