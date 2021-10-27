@@ -2,6 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Container from "../components/Container";
 import Sidebar from "../components/Sidebar";
+import MainLayout from "../layouts/MainLayout"
 
 const About = () => {
   return (
@@ -11,15 +12,11 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container>
-        <Sidebar />
-
-        <main>
-          About me here
-        </main>
-
-
-      </Container>
+      <MainLayout>
+        <Container>
+          <main>About me here</main>
+        </Container>
+      </MainLayout>
     </>
   );
 };
