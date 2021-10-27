@@ -10,12 +10,7 @@ interface Props {
 
 import {
   CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
   HomeIcon,
-  InboxIcon,
-  MenuIcon,
-  UsersIcon,
   XIcon,
   DocumentReportIcon,
 } from '@heroicons/react/outline';
@@ -80,7 +75,7 @@ const Sidebar = ({ sidebarOpen = false, setSidebarOpen }: Props) => {
                   </button>
                 </div>
               </Transition.Child>
-              <Sidebar.inner />
+              <Sidebar.Inner />
             </StyledSidebar>
           </Transition.Child>
           <div className="flex-shrink-0 w-14">
@@ -92,7 +87,7 @@ const Sidebar = ({ sidebarOpen = false, setSidebarOpen }: Props) => {
         <div className="flex flex-col w-64">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <StyledSidebar className="flex flex-col h-0 flex-1">
-            <Sidebar.inner />
+            <Sidebar.Inner />
           </StyledSidebar>
         </div>
       </div>
@@ -100,7 +95,9 @@ const Sidebar = ({ sidebarOpen = false, setSidebarOpen }: Props) => {
   );
 };
 
-Sidebar.inner = () => {
+// eslint-disable-next-line react/display-name
+Sidebar.Inner = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
   return (
     <>

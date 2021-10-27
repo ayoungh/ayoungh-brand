@@ -3,10 +3,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Container from '../components/Container'
 import Card from "../components/Card";
-import Sidebar from "../components/Sidebar";
 import React from 'react';
 import MainLayout from '../layouts/MainLayout';
-import NowPlaying from '../components/Spotify';
 
 const Home = () => {
   return (
@@ -44,6 +42,7 @@ const Home = () => {
                 rel="noopener noreferrer"
               >
                 Proudly Powered by{" "}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/vercel.svg"
                   alt="Vercel Logo"
