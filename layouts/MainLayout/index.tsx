@@ -3,6 +3,10 @@ import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import styled from "styled-components";
 import Head from "next/head";
+import Container from "../../components/Container";
+import Grid from "../../components/Grid";
+import Footer from "../../components/Footer";
+import { ThemeProvider } from "../../context/ThemeContext";
 
 interface Props {
   children?: React.ReactNode;
@@ -20,23 +24,23 @@ export default function MainLayout({ children }: Props) {
           rel="stylesheet"
         />
       </Head>
-      <StyledMain className="h-screen flex overflow-hidden bg-gray-400">
-        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
-        <div className="flex flex-col w-0 flex-1 overflow-hidden">
-          <Header setSidebarOpen={setSidebarOpen} />
-          <main className="flex-1 relative z-0 overflow-y-auto focus:outline-none">
-            {children}
-          </main>
-        </div>
-      </StyledMain>
+      <ThemeProvider>
+        <Container className="h-screen">
+          <div className="col-start-2 col-span-10 border bg-white dark:bg-black">
+            {/* <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
+            <Header setSidebarOpen={setSidebarOpen} />
+            <main className="">{children}</main>
+            <Footer />
+          </div>
+        </Container>
+      </ThemeProvider>
     </>
   );
 }
 
-const StyledMain = styled.div`
-  background-image: url('https://source.unsplash.com/user/ayoungh');
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
+// const StyledMain = styled.div`
+//   background-image: url('https://source.unsplash.com/user/ayoungh');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// `;
 

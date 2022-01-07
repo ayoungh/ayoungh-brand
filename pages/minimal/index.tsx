@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import Grid from '../../components/Grid';
 import NowPlaying from '../../components/Spotify';
+import Button from '../../components/Button';
 
 const Minimal = () => {
   return (
@@ -13,7 +14,7 @@ const Minimal = () => {
       </Head>
 
       <main className="flex-grow mx-4">
-        <Grid>
+        <Grid className="m-4">
           <Grid.column
             full
             className="flex flex-col align-middle justify-center min-h-[50px] "
@@ -24,7 +25,7 @@ const Minimal = () => {
             </div>
           </Grid.column>
           <Grid.column className=" min-h-[100px] rounded-md bg-gradient-to-bl from-red-100 to-red-600 shadow-red-400 drop-shadow-xl">
-            Test 2
+            <Button>Test</Button>
           </Grid.column>
           <Grid.column className=" min-h-[100px] rounded-md bg-gradient-to-bl from-green-200 to-green-600 shadow-green-400 drop-shadow-xl">
             <NowPlaying />
@@ -51,11 +52,13 @@ const Minimal = () => {
             </div>
           </Grid.column>
           <Grid.column className="flex flex-col align-middle justify-center min-h-[100px] rounded-md bg-gradient-to-bl from-orange-200 to-orange-400 shadow-orange-400 drop-shadow-xl">
-            <StyledLink href={`/about`}>
+            <Button className=" align-middle justify-center flex">
+            <Link href={`/about`} >
               <div className="text-5xl font-extrabold text-white text-center">
                 About
               </div>
-            </StyledLink>
+            </Link>
+            </Button>
           </Grid.column>
           <Grid.column canvas className="overflow-hidden rounded-md">
             <StyledCard>
